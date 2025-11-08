@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 import ScrollDownIcon from "@/components/icons/ScrollDown"
 
 export default function Page() {
-
     const [isMobile, setIsMobile] = useState(false)
     const [showVideo, setShowVideo] = useState(false)
 

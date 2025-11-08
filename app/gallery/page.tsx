@@ -1,8 +1,9 @@
 import path from "path"
 import fs from "fs"
-import { MasonryPhotoAlbum, Photo } from "react-photo-album"
-import "react-photo-album/masonry.css";
+import { Photo } from "react-photo-album"
 import sharp from "sharp";
+import Gallery from "@/components/Gallery";
+import "./lightbox.css"
 
 async function getPhotos(): Promise<Photo[]> {
     const dir = path.join(process.cwd(), 'public/images/gallery')
@@ -34,7 +35,7 @@ export default async function Page() {
 
     return (
         <div className='page' id="gallery">
-            <MasonryPhotoAlbum photos={photos} />
+            <Gallery photos={photos} />
         </div>
     )
 }
