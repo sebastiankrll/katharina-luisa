@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  nextjs:
+    build: .
+    restart: always
+    volumes:
+      - ./public/images:/app/public/images
+    networks:
+      - traefik_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextjs.rule=Host(`katharina-luisa.com`)"
+      - "traefik.http.routers.nextjs.entrypoints=websecure"
+      - "traefik.http.routers.nextjs.tls=true"
+      - "traefik.http.routers.nextjs.tls.certresolver=letsencrypt"
+
+networks:
+  traefik_proxy:
+    external: true

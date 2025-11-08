@@ -1,0 +1,11 @@
+#home {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+}
+
+#home-name p {
+    background: var(--color-dark);
+    color: white;
+}
