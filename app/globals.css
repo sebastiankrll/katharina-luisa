@@ -153,4 +153,8 @@ footer a {
         gap: .5rem;
     }
 
+    footer * {
+        font-size: 0.5rem;
+    }
+
 }
