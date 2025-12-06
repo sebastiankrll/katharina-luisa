@@ -11,4 +11,4 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=builder /app ./
 EXPOSE 3010
-CMD ["npm", "start"]
+CMD ["npm", "start", "--", "-p", "3010"]
