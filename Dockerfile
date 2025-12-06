@@ -10,5 +10,6 @@ RUN npm run build
 FROM node:20-alpine
 WORKDIR /app
 COPY --from=builder /app ./
+ENV PORT=3010
 EXPOSE 3010
-CMD ["npm", "start", "--", "-p", "3010"]
+CMD ["npm", "start"]

@@ -10,12 +10,11 @@ services:
       - traefik_proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nextjs.rule=Host(`katharina-luisa.com`)"
-      - "traefik.http.routers.nextjs.entrypoints=websecure"
-      - "traefik.http.routers.nextjs.tls=true"
-      - "traefik.http.routers.nextjs.tls.certresolver=letsencrypt"
-      - "traefik.http.services.nextjs.loadbalancer.server.port=3010"
-
+      - "traefik.http.routers.nextjs-kl.rule=Host(`katharina-luisa.com`)"
+      - "traefik.http.routers.nextjs-kl.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-kl.tls=true"
+      - "traefik.http.routers.nextjs-kl.tls.certresolver=letsencrypt"
+      - "traefik.http.services.nextjs-kl.loadbalancer.server.port=3010"
 networks:
   traefik_proxy:
     external: true
